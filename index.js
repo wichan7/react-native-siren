@@ -15,7 +15,7 @@ const createAPI = (baseURL = 'https://itunes.apple.com/') => {
   })
 
   return {
-    getLatest: (bundleId, country = undefined) => api.get('lookup', { bundleId, country })
+    getLatest: (bundleId, country = undefined) => api.get('lookup', { bundleId, country, ts: Date.now() })
   }
 }
 
